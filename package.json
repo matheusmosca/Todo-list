@@ -1,0 +1,24 @@
+{
+  "name": "todoApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@reactivex/rxjs": "^6.5.4",
+    "remove": "^0.1.5",
+    "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.5.4"
+  }
+}
