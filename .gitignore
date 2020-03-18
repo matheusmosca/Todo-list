@@ -1,5 +1,3 @@
 #
 node_modules
-css/styleOld.css
-html/indexOld.html
-dist
+package.old.json
