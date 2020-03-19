@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const ul = document.querySelector('ul');
+const button = document.querySelector('button');
 
 // Save TODO list in local storage
 function saveInStorage() {
@@ -14,6 +15,9 @@ function loadStorage() {
 
 // Create a li element and append it to ul
 function createTodoElement(inputContent) {
+    // validation of input
+    if (inputContent === '') return;
+    
     const todo = document.createElement('li');
     todo.textContent = inputContent;
     
@@ -31,7 +35,7 @@ function renderTodos(listOfTodos) {
     listOfTodos.forEach(element => createTodoElement(element));
 }
 
-const listOfTodos = loadStorage();
+let listOfTodos = loadStorage();
 
 renderTodos(listOfTodos);
 
@@ -50,7 +54,7 @@ form.addEventListener('submit', (e) => {
     // Create a li tag and append it to ul
     createTodoElement(todoContent);
 
-    // Saves the new TODO in local Storage
+    // Save the new TODO in local Storage
     listOfTodos.push(todoContent);
     saveInStorage()
     input.value = '';
@@ -66,3 +70,10 @@ ul.addEventListener('click', ({ target }) => {
         removeTodo(positionOfTarget, target);
     }
 });
+
+// Clear Todo List:
+button.addEventListener('click', (e) => {
+    listOfTodos = [];
+    saveInStorage();
+    ul.innerHTML = '';
+})
