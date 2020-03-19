@@ -29,6 +29,8 @@ main {
 }
 
 h1 {
+    margin-top: 1em;
+    margin-bottom: .3em;
     font-size: 3.2rem;
     font-weight: bold;
 }
@@ -61,6 +63,11 @@ li {
     width: 400px;
     height: 55px;
     box-sizing: border-box;
+
+    /* font awesome */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 label {
@@ -69,4 +76,66 @@ label {
     font-size: 1.3rem;
     margin-bottom: .5em;
     box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+    main {
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    form {
+         width: 210px;
+    }
+
+    ul {
+        width: 210px;
+    }
+
+    li {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    input[type=text] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    main {
+        width: 100%px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    form {
+         width: 250px;
+    }
+
+    ul {
+        width: 250px;
+    }
+
+    li {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    input[type=text] {
+        width: 100%;
+    }
 }

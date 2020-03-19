@@ -53,6 +53,7 @@ form.addEventListener('submit', (e) => {
     // Saves the new TODO in local Storage
     listOfTodos.push(todoContent);
     saveInStorage()
+    input.value = '';
 });
 
 // Deleting Todo:
